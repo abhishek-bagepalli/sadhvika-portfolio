@@ -241,7 +241,7 @@ if prompt := st.chat_input("Ask about Sadhvika…"):
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown(
     '<p style="text-align:center;font-size:12px;color:#444;">'
-    'Powered by GPT-4o · Built for '
+    'Powered by GPT-4o mini · Built for '
     '<a href="https://abhishek-bagepalli.github.io/sadhvika-portfolio/" target="_blank">'
     'Sadhvika CR\'s portfolio</a></p>',
     unsafe_allow_html=True,
