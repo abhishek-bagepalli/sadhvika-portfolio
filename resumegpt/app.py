@@ -223,7 +223,7 @@ if prompt := st.chat_input("Ask about Sadhvika…"):
 
     with st.chat_message("assistant"):
         stream = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 *[{"role": m["role"], "content": m["content"]}
