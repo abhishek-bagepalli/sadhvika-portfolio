@@ -176,6 +176,42 @@
 .repick-cancel:hover { border-color: #fff; color: #fff; }
 
 /* ===== NAV PROFILE SWITCHER ===== */
+/* ResumeGPT nav button */
+.nav-resumegpt-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--red);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+}
+.nav-resumegpt-btn:hover { background: #f40612; transform: scale(1.03); }
+
+/* ResumeGPT contact card */
+.contact-link-gpt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: var(--red-dim);
+    border: 1px solid var(--red-bdr);
+    border-radius: 4px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    transition: background 0.2s, border-color 0.2s;
+    justify-content: center;
+}
+.contact-link-gpt:hover { background: rgba(229,9,20,0.2); border-color: var(--red); }
+
 .nav-profile-btn {
     display: none;
     align-items: center;
