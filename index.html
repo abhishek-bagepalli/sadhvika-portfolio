@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadhvika CR — OT Security Professional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== INTRO OVERLAY (animation → profile picker) ===== -->
+    <div class="intro" id="intro" aria-hidden="true">
+
+        <!-- Phase 1: Logo animation -->
+        <div id="intro-anim">
+            <div class="intro-stripes">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+            </div>
+            <div class="intro-center">
+                <div class="intro-logo">SCR</div>
+                <div class="intro-line"></div>
+                <div class="intro-sub">SADHVIKA CHANDRA RAMACHANDRA</div>
+            </div>
+        </div>
+
+        <!-- Phase 2: Profile picker -->
+        <div class="profiles-screen" id="profiles-screen">
+            <h2 class="profiles-heading">Who's viewing?</h2>
+            <div class="profiles-list">
+
+                <button class="profile-card" data-profile="professional">
+                    <div class="profile-avatar avatar-pro">
+                        <svg viewBox="0 0 24 24" fill="white" width="52" height="52">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1z"/>
+                        </svg>
+                    </div>
+                    <span class="profile-name">Professional</span>
+                </button>
+
+                <button class="profile-card" data-profile="personal">
+                    <div class="profile-avatar avatar-personal">
+                        <svg viewBox="0 0 24 24" fill="white" width="52" height="52">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-5.33 0-8 2.67-8 4v1h16v-1c0-1.33-2.67-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <span class="profile-name">Personal</span>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">SCR</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-profile-btn" id="profile-switcher" title="Switch profile">
+            <span class="nav-profile-dot"></span>
+            <span class="nav-profile-label" id="nav-profile-label"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="opacity:0.6">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+
+        <!-- Background carousel -->
+        <div class="hero-carousel-bg" aria-hidden="true">
+
+            <!-- Row 1 — scrolls left -->
+            <div class="carousel-track track-left track-slow">
+                <div class="c-card cc-red"><span class="cc-cat">Experience</span><span class="cc-title">OT Security Intern</span><span class="cc-sub">Evonik · Marl</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Research</span><span class="cc-title">Semantic Diffing with LLMs</span><span class="cc-sub">Fraunhofer</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Framework</span><span class="cc-title">ISO 27001</span><span class="cc-sub">Compliance &amp; Risk</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Tool</span><span class="cc-title">SIEM Monitoring</span><span class="cc-sub">Threat Detection</span></div>
+                <div class="c-card cc-green"><span class="cc-cat">Experience</span><span class="cc-title">Systems Engineer</span><span class="cc-sub">Infosys · Mysore</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Analytics</span><span class="cc-title">Power BI Dashboards</span><span class="cc-sub">Archer GRC Integration</span></div>
+                <div class="c-card cc-red"><span class="cc-cat">Skill</span><span class="cc-title">Vulnerability Mgmt</span><span class="cc-sub">20+ Remediated</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Education</span><span class="cc-title">M.Sc. ICE</span><span class="cc-sub">TU Darmstadt</span></div>
+                <!-- duplicate for seamless loop -->
+                <div class="c-card cc-red"><span class="cc-cat">Experience</span><span class="cc-title">OT Security Intern</span><span class="cc-sub">Evonik · Marl</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Research</span><span class="cc-title">Semantic Diffing with LLMs</span><span class="cc-sub">Fraunhofer</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Framework</span><span class="cc-title">ISO 27001</span><span class="cc-sub">Compliance &amp; Risk</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Tool</span><span class="cc-title">SIEM Monitoring</span><span class="cc-sub">Threat Detection</span></div>
+                <div class="c-card cc-green"><span class="cc-cat">Experience</span><span class="cc-title">Systems Engineer</span><span class="cc-sub">Infosys · Mysore</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Analytics</span><span class="cc-title">Power BI Dashboards</span><span class="cc-sub">Archer GRC Integration</span></div>
+                <div class="c-card cc-red"><span class="cc-cat">Skill</span><span class="cc-title">Vulnerability Mgmt</span><span class="cc-sub">20+ Remediated</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Education</span><span class="cc-title">M.Sc. ICE</span><span class="cc-sub">TU Darmstadt</span></div>
+            </div>
+
+            <!-- Row 2 — scrolls right -->
+            <div class="carousel-track track-right track-mid">
+                <div class="c-card cc-purple"><span class="cc-cat">Project</span><span class="cc-title">Defect Elimination</span><span class="cc-sub">P&amp;G · Innovation Lab</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Language</span><span class="cc-title">Python &amp; SQL</span><span class="cc-sub">Scripting &amp; Analysis</span></div>
+                <div class="c-card cc-green"><span class="cc-cat">Certification</span><span class="cc-title">CySA+</span><span class="cc-sub">CompTIA · In Progress</span></div>
+                <div class="c-card cc-red"><span class="cc-cat">Project</span><span class="cc-title">IoT Attendance System</span><span class="cc-sub">RFID · Python</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Platform</span><span class="cc-title">Databricks</span><span class="cc-sub">Delta Lake · Big Data</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Skill</span><span class="cc-title">Incident Response</span><span class="cc-sub">OT Alert Triage</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Education</span><span class="cc-title">B.Tech ECE</span><span class="cc-sub">KSIT · VTU Bangalore</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Certification</span><span class="cc-title">IBM Cybersecurity</span><span class="cc-sub">Compliance &amp; Admin</span></div>
+                <!-- duplicate -->
+                <div class="c-card cc-purple"><span class="cc-cat">Project</span><span class="cc-title">Defect Elimination</span><span class="cc-sub">P&amp;G · Innovation Lab</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Language</span><span class="cc-title">Python &amp; SQL</span><span class="cc-sub">Scripting &amp; Analysis</span></div>
+                <div class="c-card cc-green"><span class="cc-cat">Certification</span><span class="cc-title">CySA+</span><span class="cc-sub">CompTIA · In Progress</span></div>
+                <div class="c-card cc-red"><span class="cc-cat">Project</span><span class="cc-title">IoT Attendance System</span><span class="cc-sub">RFID · Python</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Platform</span><span class="cc-title">Databricks</span><span class="cc-sub">Delta Lake · Big Data</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Skill</span><span class="cc-title">Incident Response</span><span class="cc-sub">OT Alert Triage</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Education</span><span class="cc-title">B.Tech ECE</span><span class="cc-sub">KSIT · VTU Bangalore</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Certification</span><span class="cc-title">IBM Cybersecurity</span><span class="cc-sub">Compliance &amp; Admin</span></div>
+            </div>
+
+            <!-- Row 3 — scrolls left, slowest -->
+            <div class="carousel-track track-left track-fast">
+                <div class="c-card cc-green"><span class="cc-cat">Networking</span><span class="cc-title">TCP/IP &amp; VPN</span><span class="cc-sub">BGP · VLAN · DNS</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Tool</span><span class="cc-title">Archer GRC</span><span class="cc-sub">Risk Management</span></div>
+                <div class="c-card cc-red"><span class="cc-cat">Teaching</span><span class="cc-title">JavaScript Tutor</span><span class="cc-sub">WhiteHat Jr · 100+ Students</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Analytics</span><span class="cc-title">Process Mining</span><span class="cc-sub">Anomaly Detection</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Systems</span><span class="cc-title">Mainframe Automation</span><span class="cc-sub">Zero SLA Breaches</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Skill</span><span class="cc-title">NLP &amp; LLMs</span><span class="cc-sub">Threat Intelligence</span></div>
+                <div class="c-card cc-green"><span class="cc-cat">Languages</span><span class="cc-title">5 Languages</span><span class="cc-sub">EN · DE · HI · KN · TA</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Certification</span><span class="cc-title">Python for AI</span><span class="cc-sub">IBM · Data Science</span></div>
+                <!-- duplicate -->
+                <div class="c-card cc-green"><span class="cc-cat">Networking</span><span class="cc-title">TCP/IP &amp; VPN</span><span class="cc-sub">BGP · VLAN · DNS</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Tool</span><span class="cc-title">Archer GRC</span><span class="cc-sub">Risk Management</span></div>
+                <div class="c-card cc-red"><span class="cc-cat">Teaching</span><span class="cc-title">JavaScript Tutor</span><span class="cc-sub">WhiteHat Jr · 100+ Students</span></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Analytics</span><span class="cc-title">Process Mining</span><span class="cc-sub">Anomaly Detection</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Systems</span><span class="cc-title">Mainframe Automation</span><span class="cc-sub">Zero SLA Breaches</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Skill</span><span class="cc-title">NLP &amp; LLMs</span><span class="cc-sub">Threat Intelligence</span></div>
+                <div class="c-card cc-green"><span class="cc-cat">Languages</span><span class="cc-title">5 Languages</span><span class="cc-sub">EN · DE · HI · KN · TA</span></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Certification</span><span class="cc-title">Python for AI</span><span class="cc-sub">IBM · Data Science</span></div>
+            </div>
+
+        </div>
+
+        <div class="hero-bg" id="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-tag" id="hero-tag">OT Security &nbsp;·&nbsp; Cybersecurity &nbsp;·&nbsp; Data Analytics</p>
+            <h1 class="hero-name">SADHVIKA<br>CHANDRA RAMACHANDRA</h1>
+            <p class="hero-summary" id="hero-summary">Remediated critical OT vulnerabilities across 6 industrial units. Security-focused IT professional with 3 years of experience in OT security, incident response, and enterprise systems.</p>
+            <div class="hero-buttons" id="hero-buttons">
+                <a href="#experience" class="btn btn-primary" id="hero-btn-primary">&#9654; Explore Career</a>
+                <a href="CV_sadhvika.pdf" download class="btn btn-secondary" id="hero-btn-secondary">&#8659; Download CV</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">&#8595;</div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrap">
+                    <img src="images/profile.jpg" alt="Sadhvika Chandra Ramachandra" class="about-photo" onerror="this.style.display='none';document.getElementById('photo-placeholder').style.display='flex'">
+                    <div class="profile-placeholder" id="photo-placeholder">SCR</div>
+                </div>
+                <div class="about-text">
+                    <p class="section-label">About Me</p>
+                    <h3 id="about-heading">Security Engineer &amp; OT Specialist</h3>
+                    <p id="about-bio-1">Currently pursuing a Master's in Information and Communication Engineering at TU Darmstadt, Germany. With hands-on experience at Evonik and Infosys, I bridge the gap between operational technology security and enterprise IT systems.</p>
+                    <p id="about-bio-2">Fluent in English (C2), conversational in German (B2), and native in Hindi, Kannada, and Tamil.</p>
+                    <div class="tag-row">
+                        <span class="tag">ISO 27001</span>
+                        <span class="tag">SIEM</span>
+                        <span class="tag">OT Security</span>
+                        <span class="tag">Archer GRC</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="row-title">Career Episodes</h2>
+            <div class="cards-grid">
+
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <span class="card-badge">Jun 2024 – Jul 2025</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>OT Security Intern</h3>
+                        <p class="card-company">Evonik &mdash; Marl, Germany</p>
+                        <ul>
+                            <li>Investigated OT security alerts and remediated 20+ vulnerabilities across 6 industrial units</li>
+                            <li>Built Power BI dashboards integrated with Archer GRC, cutting manual effort by 40%</li>
+                            <li>Conducted OT security training aligned with ISO 27001 standards</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">SIEM</span>
+                            <span class="tag tag-sm">Power BI</span>
+                            <span class="tag tag-sm">ISO 27001</span>
+                            <span class="tag tag-sm">Archer GRC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <span class="card-badge">Apr 2021 – Sep 2022</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Systems Engineer</h3>
+                        <p class="card-company">Infosys &mdash; Mysore, India</p>
+                        <ul>
+                            <li>Maintained legacy mainframe systems with zero SLA breaches</li>
+                            <li>Automated backend processes, improving efficiency by 25%</li>
+                            <li>Built predictive analytics model for fraud detection in legacy systems</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">Java</span>
+                            <span class="tag tag-sm">REXX</span>
+                            <span class="tag tag-sm">Mainframe</span>
+                            <span class="tag tag-sm">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-header">
+                        <span class="card-badge">Oct 2020 – Apr 2021</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Tutor</h3>
+                        <p class="card-company">WhiteHat Jr (BYJU'S) &mdash; Mumbai, India</p>
+                        <ul>
+                            <li>Tutored 100+ high school students in JavaScript, C, and Math</li>
+                            <li>Guided 15+ web design and game development projects</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">JavaScript</span>
+                            <span class="tag tag-sm">HTML/CSS</span>
+                            <span class="tag tag-sm">Teaching</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="row-title">Featured Projects</h2>
+            <div class="cards-grid">
+
+                <div class="card fade-in">
+                    <div class="card-header card-header-accent">
+                        <span class="card-badge">Fraunhofer</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Automated Semantic Diffing of Websites with LLMs</h3>
+                        <p>Developed an LLM-based system for detecting web-based cyber threats via semantic diffing. Automated DOM-level and contextual drift detection for vulnerability tracking using NLP and structural diff analysis.</p>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">LLMs</span>
+                            <span class="tag tag-sm">NLP</span>
+                            <span class="tag tag-sm">Cybersecurity</span>
+                            <span class="tag tag-sm">HTML Parsing</span>
+                            <span class="tag tag-sm">Threat Hunting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-header card-header-accent">
+                        <span class="card-badge">Innovation Lab | Femtec | P&amp;G</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Defect Elimination via Advanced Analytics</h3>
+                        <p>Built a predictive model in Databricks to detect scrap root causes from manufacturing data. Applied process mining, anomaly detection, and time-series analysis in collaboration with P&amp;G.</p>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">Databricks</span>
+                            <span class="tag tag-sm">Delta Lake</span>
+                            <span class="tag tag-sm">Time-Series</span>
+                            <span class="tag tag-sm">Anomaly Detection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-header card-header-accent">
+                        <span class="card-badge">Bachelor's Thesis</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Insight Update &mdash; IoT Attendance System</h3>
+                        <p>Built an IoT-based RFID attendance system in Python with real-time absentee alerts via SMS/email (SMTP). Achieved an 80% accuracy boost in attendance reporting.</p>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">Python</span>
+                            <span class="tag tag-sm">RFID</span>
+                            <span class="tag tag-sm">IoT</span>
+                            <span class="tag tag-sm">SMTP</span>
+                            <span class="tag tag-sm">Embedded Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="row-title">Skills &amp; Tools</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category fade-in">
+                    <h4 class="skill-cat-title">Security</h4>
+                    <div class="pill-wrap">
+                        <span class="pill">SIEM</span>
+                        <span class="pill">OT Security</span>
+                        <span class="pill">ISO 27001</span>
+                        <span class="pill">Archer GRC</span>
+                        <span class="pill">Incident Response</span>
+                        <span class="pill">Threat Detection</span>
+                        <span class="pill">Vulnerability Mgmt</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h4 class="skill-cat-title">Programming</h4>
+                    <div class="pill-wrap">
+                        <span class="pill">Python</span>
+                        <span class="pill">SQL</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Java</span>
+                        <span class="pill">REXX</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h4 class="skill-cat-title">Data &amp; Analytics</h4>
+                    <div class="pill-wrap">
+                        <span class="pill">Power BI</span>
+                        <span class="pill">Databricks</span>
+                        <span class="pill">Delta Lake</span>
+                        <span class="pill">Predictive Modeling</span>
+                        <span class="pill">Process Mining</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h4 class="skill-cat-title">Networking</h4>
+                    <div class="pill-wrap">
+                        <span class="pill">TCP/IP</span>
+                        <span class="pill">DNS</span>
+                        <span class="pill">BGP</span>
+                        <span class="pill">VLAN</span>
+                        <span class="pill">VPN</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h4 class="skill-cat-title">Systems</h4>
+                    <div class="pill-wrap">
+                        <span class="pill">Windows</span>
+                        <span class="pill">Linux</span>
+                        <span class="pill">Mainframe</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in" id="skill-languages">
+                    <h4 class="skill-cat-title">Languages</h4>
+                    <div class="pill-wrap">
+                        <span class="pill">English (C2)</span>
+                        <span class="pill">German (B2)</span>
+                        <span class="pill">Hindi</span>
+                        <span class="pill">Kannada</span>
+                        <span class="pill">Tamil</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="row-title">Education</h2>
+            <div class="cards-grid cards-grid-2">
+
+                <div class="card fade-in">
+                    <div class="card-body">
+                        <span class="badge-inline">Ongoing</span>
+                        <h3>M.Sc. Information and Communication Engineering</h3>
+                        <p class="card-company">Technische Universität Darmstadt &mdash; Germany</p>
+                        <p class="card-date">Oct 2022 – Present</p>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-body">
+                        <span class="badge-inline">Completed</span>
+                        <h3>B.Tech. Electronic &amp; Communication Engineering</h3>
+                        <p class="card-company">K.S Institute of Technology (VTU) &mdash; Bangalore, India</p>
+                        <p class="card-date">Aug 2016 – Aug 2020</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section section-alt" id="certifications">
+        <div class="container">
+            <h2 class="row-title">Certifications</h2>
+            <div class="cert-grid">
+
+                <div class="cert-item fade-in">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <strong>CySA+ (CompTIA)</strong>
+                        <p>In Progress</p>
+                    </div>
+                </div>
+
+                <div class="cert-item fade-in">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <strong>IoT Workshop</strong>
+                        <p>Microsoft</p>
+                    </div>
+                </div>
+
+                <div class="cert-item fade-in">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <strong>Python for Data Science and AI</strong>
+                        <p>IBM</p>
+                    </div>
+                </div>
+
+                <div class="cert-item fade-in">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <strong>Cybersecurity Compliance Framework &amp; System Administration</strong>
+                        <p>IBM</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section-contact" id="contact">
+        <div class="container">
+            <h2 class="row-title row-title-center">Let's Connect</h2>
+            <p class="contact-sub" id="contact-sub">Open to cybersecurity roles in OT/IT security, GRC, and threat intelligence.</p>
+            <div class="contact-links">
+                <a href="mailto:sadhvikachandra613@gmail.com" class="contact-link">
+                    <span class="contact-icon">&#9993;</span>
+                    sadhvikachandra613@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/sadhvikacr" target="_blank" rel="noopener" class="contact-link">
+                    <span class="contact-icon contact-icon-in">in</span>
+                    linkedin.com/in/sadhvikacr
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Sadhvika Chandra Ramachandra</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
