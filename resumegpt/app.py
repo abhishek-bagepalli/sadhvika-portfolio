@@ -203,7 +203,6 @@ if not st.session_state.messages:
         'text-transform:uppercase;margin-bottom:8px;">Suggested questions</p>',
         unsafe_allow_html=True,
     )
-    cols = st.columns(1)
     for q in SUGGESTED_QUESTIONS:
         if st.button(q, key=q):
             st.session_state.messages.append({"role": "user", "content": q})
@@ -215,27 +214,27 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ── Chat input ────────────────────────────────────────────────────────────────
-if prompt := st.chat_input("Ask about Sadhvika…"):
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
-        st.markdown(prompt)
-
+# ── Generate response whenever the last message is from the user ──────────────
+# (covers both suggested-question button clicks and typed input)
+if st.session_state.messages and st.session_state.messages[-1]["role"] == "user":
     with st.chat_message("assistant"):
         stream = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
-                *[{"role": m["role"], "content": m["content"]}
-                  for m in st.session_state.messages],
+                *st.session_state.messages,
             ],
             stream=True,
             max_tokens=500,
             temperature=0.4,
         )
         response = st.write_stream(stream)
-
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+# ── Chat input ────────────────────────────────────────────────────────────────
+if prompt := st.chat_input("Ask about Sadhvika…"):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.rerun()
 
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("<br><br>", unsafe_allow_html=True)
