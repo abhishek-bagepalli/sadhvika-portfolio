@@ -1,17 +1,19 @@
 // ===== PROFILE CONTENT =====
 const profiles = {
     professional: {
+        profilePhoto: 'images/professional-pic.jpeg',
         heroTag:     'OT Security &nbsp;&middot;&nbsp; Cybersecurity &nbsp;&middot;&nbsp; Data Analytics',
         heroSummary: 'Remediated critical OT vulnerabilities across 6 industrial units. Security-focused IT professional with 3 years of experience in OT security, incident response, and enterprise systems.',
         heroPrimary: { label: '&#9654; Explore Career', href: '#experience', download: false },
-        heroSecondary: { label: '&#8659; Download CV',  href: 'CV_sadhvika.pdf', download: true },
-        aboutHeading: 'Security Engineer &amp; OT Specialist',
+        heroSecondary: { label: '&#8659; Download CV',  href: 'CV_sadhvika (India).pdf', download: true },
+        aboutHeading: 'Cybersecurity &amp; OT Specialist',
         aboutBio1: "Currently pursuing a Master's in Information and Communication Engineering at TU Darmstadt, Germany. With hands-on experience at Evonik and Infosys, I bridge the gap between operational technology security and enterprise IT systems.",
         aboutBio2: 'Fluent in English (C2), conversational in German (B2), and native in Hindi, Kannada, and Tamil.',
         contactSub: 'Open to cybersecurity roles in OT/IT security, GRC, and threat intelligence.',
         navLabel:   'Professional',
     },
     personal: {
+        profilePhoto: 'images/personal-pic.jpeg',
         heroTag:     'Engineer &nbsp;&middot;&nbsp; Multilingual &nbsp;&middot;&nbsp; Curious Mind',
         heroSummary: "Engineer by training, curious by nature. I've built industrial security dashboards, fraud detection models, and taught 100+ students to code — all while learning a new language. Currently calling Germany home.",
         heroPrimary: { label: '&#9654; My Story',  href: '#about', download: false },
@@ -29,6 +31,9 @@ function applyProfile(key) {
     const p = profiles[key];
     document.body.classList.remove('profile-professional', 'profile-personal');
     document.body.classList.add(`profile-${key}`);
+
+    const aboutPhoto = document.getElementById('about-photo');
+    if (aboutPhoto) { aboutPhoto.src = p.profilePhoto; }
 
     document.getElementById('hero-tag').innerHTML       = p.heroTag;
     document.getElementById('hero-summary').textContent = p.heroSummary;
@@ -105,19 +110,14 @@ document.getElementById('profile-switcher').addEventListener('click', () => {
             <h2 class="profiles-heading">Switch Profile</h2>
             <div class="profiles-list">
                 <button class="profile-card" data-profile="professional">
-                    <div class="profile-avatar avatar-pro">
-                        <svg viewBox="0 0 24 24" fill="white" width="52" height="52">
-                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1z"/>
-                        </svg>
+                    <div class="profile-avatar">
+                        <img src="images/professional-pic.jpeg" alt="Professional">
                     </div>
                     <span class="profile-name">Professional</span>
                 </button>
                 <button class="profile-card" data-profile="personal">
-                    <div class="profile-avatar avatar-personal">
-                        <svg viewBox="0 0 24 24" fill="white" width="52" height="52">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M12 14c-5.33 0-8 2.67-8 4v1h16v-1c0-1.33-2.67-4-8-4z"/>
-                        </svg>
+                    <div class="profile-avatar">
+                        <img src="images/personal-pic.jpeg" alt="Personal">
                     </div>
                     <span class="profile-name">Personal</span>
                 </button>
@@ -173,3 +173,8 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ===== TIMELINE FLIP CARDS =====
+document.querySelectorAll('.tl-flip').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+});

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadhvika CR — OT Security Professional</title>
+    <title>Sadhvika CR | OT Security Professional</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -11,7 +11,7 @@
 <body>
 
     <!-- ===== INTRO OVERLAY (animation → profile picker) ===== -->
-    <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro" id="intro">
 
         <!-- Phase 1: Logo animation -->
         <div id="intro-anim">
@@ -33,20 +33,15 @@
             <div class="profiles-list">
 
                 <button class="profile-card" data-profile="professional">
-                    <div class="profile-avatar avatar-pro">
-                        <svg viewBox="0 0 24 24" fill="white" width="52" height="52">
-                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1z"/>
-                        </svg>
+                    <div class="profile-avatar">
+                        <img src="images/professional-pic.jpeg" alt="Professional">
                     </div>
                     <span class="profile-name">Professional</span>
                 </button>
 
                 <button class="profile-card" data-profile="personal">
-                    <div class="profile-avatar avatar-personal">
-                        <svg viewBox="0 0 24 24" fill="white" width="52" height="52">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M12 14c-5.33 0-8 2.67-8 4v1h16v-1c0-1.33-2.67-4-8-4z"/>
-                        </svg>
+                    <div class="profile-avatar">
+                        <img src="images/personal-pic.jpeg" alt="Personal">
                     </div>
                     <span class="profile-name">Personal</span>
                 </button>
@@ -61,6 +56,7 @@
         <div class="nav-logo">SCR</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Journey</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -86,67 +82,77 @@
         <!-- Background carousel -->
         <div class="hero-carousel-bg" aria-hidden="true">
 
-            <!-- Row 1 — scrolls left -->
+            <!-- Row 1 — scrolls left (work/professional) -->
             <div class="carousel-track track-left track-slow">
                 <div class="c-card cc-red"><span class="cc-cat">Experience</span><span class="cc-title">OT Security Intern</span><span class="cc-sub">Evonik · Marl</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Research</span><span class="cc-title">Semantic Diffing with LLMs</span><span class="cc-sub">Fraunhofer</span></div>
-                <div class="c-card cc-purple"><span class="cc-cat">Framework</span><span class="cc-title">ISO 27001</span><span class="cc-sub">Compliance &amp; Risk</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Tool</span><span class="cc-title">SIEM Monitoring</span><span class="cc-sub">Threat Detection</span></div>
+                <div class="c-card c-card-img"><img src="images/img-work-desk.jpeg" alt="At the Desk" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">At the Desk</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-evonik-plant.jpeg" alt="Evonik Plant" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Evonik Plant</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-evonik-meeting.jpeg" alt="Team Meeting" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Team Meeting</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-evonik-booth.jpeg" alt="Industry Expo" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Industry Expo</span></div></div>
                 <div class="c-card cc-green"><span class="cc-cat">Experience</span><span class="cc-title">Systems Engineer</span><span class="cc-sub">Infosys · Mysore</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Analytics</span><span class="cc-title">Power BI Dashboards</span><span class="cc-sub">Archer GRC Integration</span></div>
-                <div class="c-card cc-red"><span class="cc-cat">Skill</span><span class="cc-title">Vulnerability Mgmt</span><span class="cc-sub">20+ Remediated</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Education</span><span class="cc-title">M.Sc. ICE</span><span class="cc-sub">TU Darmstadt</span></div>
+                <div class="c-card c-card-img"><img src="images/img-telekom-visit.jpeg" alt="Telekom Visit" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Telekom Visit</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-infosys-reunir.jpeg" alt="Infosys Days" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Infosys Days</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-pg-certificate.jpeg" alt="P&amp;G Certificate" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">P&amp;G Certificate</span></div></div>
                 <!-- duplicate for seamless loop -->
                 <div class="c-card cc-red"><span class="cc-cat">Experience</span><span class="cc-title">OT Security Intern</span><span class="cc-sub">Evonik · Marl</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Research</span><span class="cc-title">Semantic Diffing with LLMs</span><span class="cc-sub">Fraunhofer</span></div>
-                <div class="c-card cc-purple"><span class="cc-cat">Framework</span><span class="cc-title">ISO 27001</span><span class="cc-sub">Compliance &amp; Risk</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Tool</span><span class="cc-title">SIEM Monitoring</span><span class="cc-sub">Threat Detection</span></div>
+                <div class="c-card c-card-img"><img src="images/img-work-desk.jpeg" alt="At the Desk" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">At the Desk</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-evonik-plant.jpeg" alt="Evonik Plant" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Evonik Plant</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-evonik-meeting.jpeg" alt="Team Meeting" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Team Meeting</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-evonik-booth.jpeg" alt="Industry Expo" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Industry Expo</span></div></div>
                 <div class="c-card cc-green"><span class="cc-cat">Experience</span><span class="cc-title">Systems Engineer</span><span class="cc-sub">Infosys · Mysore</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Analytics</span><span class="cc-title">Power BI Dashboards</span><span class="cc-sub">Archer GRC Integration</span></div>
-                <div class="c-card cc-red"><span class="cc-cat">Skill</span><span class="cc-title">Vulnerability Mgmt</span><span class="cc-sub">20+ Remediated</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Education</span><span class="cc-title">M.Sc. ICE</span><span class="cc-sub">TU Darmstadt</span></div>
+                <div class="c-card c-card-img"><img src="images/img-telekom-visit.jpeg" alt="Telekom Visit" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Telekom Visit</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-infosys-reunir.jpeg" alt="Infosys Days" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Infosys Days</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-pg-certificate.jpeg" alt="P&amp;G Certificate" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">P&amp;G Certificate</span></div></div>
             </div>
 
-            <!-- Row 2 — scrolls right -->
+            <!-- Row 2 — scrolls right (leadership/programs) -->
             <div class="carousel-track track-right track-mid">
-                <div class="c-card cc-purple"><span class="cc-cat">Project</span><span class="cc-title">Defect Elimination</span><span class="cc-sub">P&amp;G · Innovation Lab</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Language</span><span class="cc-title">Python &amp; SQL</span><span class="cc-sub">Scripting &amp; Analysis</span></div>
-                <div class="c-card cc-green"><span class="cc-cat">Certification</span><span class="cc-title">CySA+</span><span class="cc-sub">CompTIA · In Progress</span></div>
-                <div class="c-card cc-red"><span class="cc-cat">Project</span><span class="cc-title">IoT Attendance System</span><span class="cc-sub">RFID · Python</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Platform</span><span class="cc-title">Databricks</span><span class="cc-sub">Delta Lake · Big Data</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Skill</span><span class="cc-title">Incident Response</span><span class="cc-sub">OT Alert Triage</span></div>
-                <div class="c-card cc-purple"><span class="cc-cat">Education</span><span class="cc-title">B.Tech ECE</span><span class="cc-sub">KSIT · VTU Bangalore</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Certification</span><span class="cc-title">IBM Cybersecurity</span><span class="cc-sub">Compliance &amp; Admin</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Program</span><span class="cc-title">FEMTEC</span><span class="cc-sub">High-Potential Women in STEM</span></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-dinner.jpeg" alt="FEMTEC Dinner" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">FEMTEC Dinner</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-cohort.jpeg" alt="FEMTEC Cohort" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">FEMTEC Cohort</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-wow.jpeg" alt="WoW Event" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">WoW Event</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-team.jpeg" alt="FEMTEC Team" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">FEMTEC Team</span></div></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Leadership</span><span class="cc-title">VP IGTA</span><span class="cc-sub">AIESEC · LC Frankfurt</span></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-graduation.jpeg" alt="Graduation" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Graduation</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-pg-group.jpeg" alt="P&amp;G Group" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">P&amp;G Group</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-aiesec-celebrate.jpeg" alt="AIESEC Celebration" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">AIESEC Celebration</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-aiesec-group.jpeg" alt="AIESEC Group" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">AIESEC Group</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-aiesec-frankfurt.jpeg" alt="Frankfurt Chapter" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Frankfurt Chapter</span></div></div>
                 <!-- duplicate -->
-                <div class="c-card cc-purple"><span class="cc-cat">Project</span><span class="cc-title">Defect Elimination</span><span class="cc-sub">P&amp;G · Innovation Lab</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Language</span><span class="cc-title">Python &amp; SQL</span><span class="cc-sub">Scripting &amp; Analysis</span></div>
-                <div class="c-card cc-green"><span class="cc-cat">Certification</span><span class="cc-title">CySA+</span><span class="cc-sub">CompTIA · In Progress</span></div>
-                <div class="c-card cc-red"><span class="cc-cat">Project</span><span class="cc-title">IoT Attendance System</span><span class="cc-sub">RFID · Python</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Platform</span><span class="cc-title">Databricks</span><span class="cc-sub">Delta Lake · Big Data</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Skill</span><span class="cc-title">Incident Response</span><span class="cc-sub">OT Alert Triage</span></div>
-                <div class="c-card cc-purple"><span class="cc-cat">Education</span><span class="cc-title">B.Tech ECE</span><span class="cc-sub">KSIT · VTU Bangalore</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Certification</span><span class="cc-title">IBM Cybersecurity</span><span class="cc-sub">Compliance &amp; Admin</span></div>
+                <div class="c-card cc-purple"><span class="cc-cat">Program</span><span class="cc-title">FEMTEC</span><span class="cc-sub">High-Potential Women in STEM</span></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-dinner.jpeg" alt="FEMTEC Dinner" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">FEMTEC Dinner</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-cohort.jpeg" alt="FEMTEC Cohort" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">FEMTEC Cohort</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-wow.jpeg" alt="WoW Event" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">WoW Event</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-team.jpeg" alt="FEMTEC Team" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">FEMTEC Team</span></div></div>
+                <div class="c-card cc-blue"><span class="cc-cat">Leadership</span><span class="cc-title">VP IGTA</span><span class="cc-sub">AIESEC · LC Frankfurt</span></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-graduation.jpeg" alt="Graduation" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Graduation</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-femtec-pg-group.jpeg" alt="P&amp;G Group" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">P&amp;G Group</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-aiesec-celebrate.jpeg" alt="AIESEC Celebration" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">AIESEC Celebration</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-aiesec-group.jpeg" alt="AIESEC Group" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">AIESEC Group</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-aiesec-frankfurt.jpeg" alt="Frankfurt Chapter" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Frankfurt Chapter</span></div></div>
             </div>
 
-            <!-- Row 3 — scrolls left, slowest -->
+            <!-- Row 3 — scrolls left (personal/college) -->
             <div class="carousel-track track-left track-fast">
-                <div class="c-card cc-green"><span class="cc-cat">Networking</span><span class="cc-title">TCP/IP &amp; VPN</span><span class="cc-sub">BGP · VLAN · DNS</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Tool</span><span class="cc-title">Archer GRC</span><span class="cc-sub">Risk Management</span></div>
-                <div class="c-card cc-red"><span class="cc-cat">Teaching</span><span class="cc-title">JavaScript Tutor</span><span class="cc-sub">WhiteHat Jr · 100+ Students</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Analytics</span><span class="cc-title">Process Mining</span><span class="cc-sub">Anomaly Detection</span></div>
-                <div class="c-card cc-purple"><span class="cc-cat">Systems</span><span class="cc-title">Mainframe Automation</span><span class="cc-sub">Zero SLA Breaches</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Skill</span><span class="cc-title">NLP &amp; LLMs</span><span class="cc-sub">Threat Intelligence</span></div>
-                <div class="c-card cc-green"><span class="cc-cat">Languages</span><span class="cc-title">5 Languages</span><span class="cc-sub">EN · DE · HI · KN · TA</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Certification</span><span class="cc-title">Python for AI</span><span class="cc-sub">IBM · Data Science</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Languages</span><span class="cc-title">5 Languages</span><span class="cc-sub">EN · DE · HI · KN · TA</span></div>
+                <div class="c-card c-card-img"><img src="images/img-wanderlust.jpeg" alt="Wanderlust" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Wanderlust</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-ncc-trophy.jpeg" alt="NCC Trophy" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">NCC Trophy</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-ksit-group.jpeg" alt="KSIT Days" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">KSIT Days</span></div></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Teaching</span><span class="cc-title">JavaScript Tutor</span><span class="cc-sub">WhiteHat Jr · 100+ Students</span></div>
+                <div class="c-card c-card-img"><img src="images/img-nss-parade.jpeg" alt="NSS Parade" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">NSS Parade</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-vtu-torch.jpeg" alt="VTU Torch" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">VTU Torch</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-painting.jpeg" alt="Art &amp; Soul" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Art &amp; Soul</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-dance-school.jpeg" alt="Dance" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Dance</span></div></div>
                 <!-- duplicate -->
-                <div class="c-card cc-green"><span class="cc-cat">Networking</span><span class="cc-title">TCP/IP &amp; VPN</span><span class="cc-sub">BGP · VLAN · DNS</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Tool</span><span class="cc-title">Archer GRC</span><span class="cc-sub">Risk Management</span></div>
-                <div class="c-card cc-red"><span class="cc-cat">Teaching</span><span class="cc-title">JavaScript Tutor</span><span class="cc-sub">WhiteHat Jr · 100+ Students</span></div>
-                <div class="c-card cc-blue"><span class="cc-cat">Analytics</span><span class="cc-title">Process Mining</span><span class="cc-sub">Anomaly Detection</span></div>
-                <div class="c-card cc-purple"><span class="cc-cat">Systems</span><span class="cc-title">Mainframe Automation</span><span class="cc-sub">Zero SLA Breaches</span></div>
-                <div class="c-card cc-teal"><span class="cc-cat">Skill</span><span class="cc-title">NLP &amp; LLMs</span><span class="cc-sub">Threat Intelligence</span></div>
-                <div class="c-card cc-green"><span class="cc-cat">Languages</span><span class="cc-title">5 Languages</span><span class="cc-sub">EN · DE · HI · KN · TA</span></div>
-                <div class="c-card cc-orange"><span class="cc-cat">Certification</span><span class="cc-title">Python for AI</span><span class="cc-sub">IBM · Data Science</span></div>
+                <div class="c-card cc-teal"><span class="cc-cat">Languages</span><span class="cc-title">5 Languages</span><span class="cc-sub">EN · DE · HI · KN · TA</span></div>
+                <div class="c-card c-card-img"><img src="images/img-wanderlust.jpeg" alt="Wanderlust" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Wanderlust</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-ncc-trophy.jpeg" alt="NCC Trophy" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">NCC Trophy</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-ksit-group.jpeg" alt="KSIT Days" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">KSIT Days</span></div></div>
+                <div class="c-card cc-orange"><span class="cc-cat">Teaching</span><span class="cc-title">JavaScript Tutor</span><span class="cc-sub">WhiteHat Jr · 100+ Students</span></div>
+                <div class="c-card c-card-img"><img src="images/img-nss-parade.jpeg" alt="NSS Parade" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">NSS Parade</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-vtu-torch.jpeg" alt="VTU Torch" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">VTU Torch</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-painting.jpeg" alt="Art &amp; Soul" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Art &amp; Soul</span></div></div>
+                <div class="c-card c-card-img"><img src="images/img-dance-school.jpeg" alt="Dance" loading="lazy"><div class="c-card-img-label"><span class="cc-title" style="font-size:0.82rem">Dance</span></div></div>
             </div>
 
         </div>
@@ -169,7 +175,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-wrap">
-                    <img src="images/profile.jpg" alt="Sadhvika Chandra Ramachandra" class="about-photo" onerror="this.style.display='none';document.getElementById('photo-placeholder').style.display='flex'">
+                    <img src="images/professional-pic.jpeg" alt="Sadhvika Chandra Ramachandra" class="about-photo" id="about-photo">
                     <div class="profile-placeholder" id="photo-placeholder">SCR</div>
                 </div>
                 <div class="about-text">
@@ -190,6 +196,117 @@
         </div>
     </section>
 
+    <!-- ===== TIMELINE ===== -->
+    <section class="section section-alt" id="timeline">
+        <div class="container">
+            <h2 class="row-title">My Journey</h2>
+            <div class="tl-legend">
+                <span class="tl-leg tl-leg-edu">Education</span>
+                <span class="tl-leg tl-leg-work">Work</span>
+            </div>
+            <div class="timeline-wrap">
+                <div class="timeline">
+
+                    <div class="tl-item tl-edu">
+                        <div class="tl-logo"><img src="images/logos/logo-vtu.png" alt="VTU"></div>
+                        <div class="tl-date">Aug 2016<br>Aug 2020</div>
+                        <div class="tl-node"></div>
+                        <div class="tl-flip">
+                            <div class="tl-flip-inner">
+                                <div class="tl-content tl-flip-front">
+                                    <span class="tl-badge tl-badge-edu">Education</span>
+                                    <div class="tl-role">B.Tech ECE</div>
+                                    <div class="tl-org">KSIT · VTU</div>
+                                    <div class="tl-org">Bangalore, India</div>
+                                </div>
+                                <div class="tl-flip-back">
+                                    Balancing a dense 4-year curriculum with NSS, IEEE, and interzone sports
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-work">
+                        <div class="tl-logo"><img src="images/logos/logo-whitehatjr.png" alt="WhiteHat Jr"></div>
+                        <div class="tl-date">Oct 2020<br>Apr 2021</div>
+                        <div class="tl-node"></div>
+                        <div class="tl-flip">
+                            <div class="tl-flip-inner">
+                                <div class="tl-content tl-flip-front">
+                                    <span class="tl-badge tl-badge-work">Work</span>
+                                    <div class="tl-role">Tutor</div>
+                                    <div class="tl-org">WhiteHat Jr</div>
+                                    <div class="tl-org">Mumbai, India</div>
+                                </div>
+                                <div class="tl-flip-back">
+                                    Adapting teaching methods to meet the needs of students with varying skill levels.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-work">
+                        <div class="tl-logo"><img src="images/logos/logo-infosys.svg" alt="Infosys"></div>
+                        <div class="tl-date">Apr 2021<br>Sep 2022</div>
+                        <div class="tl-node"></div>
+                        <div class="tl-flip">
+                            <div class="tl-flip-inner">
+                                <div class="tl-content tl-flip-front">
+                                    <span class="tl-badge tl-badge-work">Work</span>
+                                    <div class="tl-role">Systems Engineer</div>
+                                    <div class="tl-org">Infosys</div>
+                                    <div class="tl-org">Mysore, India</div>
+                                </div>
+                                <div class="tl-flip-back">
+                                    Maintaining and modernizing legacy mainframe systems while ensuring uninterrupted business operations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-edu">
+                        <div class="tl-logo"><img src="images/logos/logo-tudarmstadt.png" alt="TU Darmstadt"></div>
+                        <div class="tl-date">Oct 2022<br>Aug 2026</div>
+                        <div class="tl-node"></div>
+                        <div class="tl-flip">
+                            <div class="tl-flip-inner">
+                                <div class="tl-content tl-flip-front">
+                                    <span class="tl-badge tl-badge-edu">Education</span>
+                                    <div class="tl-role">M.Sc. ICE</div>
+                                    <div class="tl-org">TU Darmstadt</div>
+                                    <div class="tl-org">Darmstadt, Germany</div>
+                                </div>
+                                <div class="tl-flip-back">
+                                    Thriving in rigorous German academia while learning the language and culture
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-work">
+                        <div class="tl-logo"><img src="images/logos/logo-evonik.png" alt="Evonik"></div>
+                        <div class="tl-date">Jun 2024<br>Jul 2025</div>
+                        <div class="tl-node"></div>
+                        <div class="tl-flip">
+                            <div class="tl-flip-inner">
+                                <div class="tl-content tl-flip-front">
+                                    <span class="tl-badge tl-badge-work">Work</span>
+                                    <div class="tl-role">OT Security Intern</div>
+                                    <div class="tl-org">Evonik</div>
+                                    <div class="tl-org">Marl, Germany</div>
+                                </div>
+                                <div class="tl-flip-back">
+                                    Driving the digitalization of legacy industrial systems with limited visibility and outdated security controls
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== EXPERIENCE ===== -->
     <section class="section section-alt" id="experience">
         <div class="container">
@@ -202,7 +319,7 @@
                     </div>
                     <div class="card-body">
                         <h3>OT Security Intern</h3>
-                        <p class="card-company">Evonik &mdash; Marl, Germany</p>
+                        <p class="card-company">Evonik · Marl, Germany</p>
                         <ul>
                             <li>Investigated OT security alerts and remediated 20+ vulnerabilities across 6 industrial units</li>
                             <li>Built Power BI dashboards integrated with Archer GRC, cutting manual effort by 40%</li>
@@ -223,7 +340,7 @@
                     </div>
                     <div class="card-body">
                         <h3>Systems Engineer</h3>
-                        <p class="card-company">Infosys &mdash; Mysore, India</p>
+                        <p class="card-company">Infosys · Mysore, India</p>
                         <ul>
                             <li>Maintained legacy mainframe systems with zero SLA breaches</li>
                             <li>Automated backend processes, improving efficiency by 25%</li>
@@ -244,7 +361,7 @@
                     </div>
                     <div class="card-body">
                         <h3>Tutor</h3>
-                        <p class="card-company">WhiteHat Jr (BYJU'S) &mdash; Mumbai, India</p>
+                        <p class="card-company">WhiteHat Jr (BYJU'S) · Mumbai, India</p>
                         <ul>
                             <li>Tutored 100+ high school students in JavaScript, C, and Math</li>
                             <li>Guided 15+ web design and game development projects</li>
@@ -266,6 +383,23 @@
         <div class="container">
             <h2 class="row-title">Featured Projects</h2>
             <div class="cards-grid">
+
+                <div class="card fade-in">
+                    <div class="card-header card-header-accent">
+                        <span class="card-badge">Master's Thesis · TU Darmstadt</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Efficient Implementations of Neural Networks on FPGAs</h3>
+                        <p>Developed optimized CNN models (VGG-16, ResNet) for hardware deployment by reducing computation complexity while preserving model accuracy. Designed a compression pipeline combining basis sharing, shift-based operations, and quantization.</p>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">CNNs</span>
+                            <span class="tag tag-sm">FPGAs</span>
+                            <span class="tag tag-sm">Quantization</span>
+                            <span class="tag tag-sm">Edge AI</span>
+                            <span class="tag tag-sm">Hardware ML</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="card fade-in">
                     <div class="card-header card-header-accent">
@@ -305,7 +439,7 @@
                         <span class="card-badge">Bachelor's Thesis</span>
                     </div>
                     <div class="card-body">
-                        <h3>Insight Update &mdash; IoT Attendance System</h3>
+                        <h3>Insight Update · IoT Attendance System</h3>
                         <p>Built an IoT-based RFID attendance system in Python with real-time absentee alerts via SMS/email (SMTP). Achieved an 80% accuracy boost in attendance reporting.</p>
                         <div class="tag-row">
                             <span class="tag tag-sm">Python</span>
@@ -313,6 +447,40 @@
                             <span class="tag tag-sm">IoT</span>
                             <span class="tag tag-sm">SMTP</span>
                             <span class="tag tag-sm">Embedded Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-header card-header-accent">
+                        <span class="card-badge">Personal Project</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>CVE Threat Intelligence Dashboard</h3>
+                        <p>Automated threat intelligence dashboard collecting and analyzing CVE data from public vulnerability feeds. Implemented risk-based prioritization using CVSS scores with interactive Power BI dashboards to track emerging threats.</p>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">Python</span>
+                            <span class="tag tag-sm">NVD API</span>
+                            <span class="tag tag-sm">Power BI</span>
+                            <span class="tag tag-sm">Pandas</span>
+                            <span class="tag tag-sm">CVSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-header card-header-accent">
+                        <span class="card-badge">Personal Project</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Security Log Analysis and Brute-Force Detection</h3>
+                        <p>Designed a security log analysis tool to detect brute-force attacks and suspicious authentication activities. Automated event correlation and anomaly detection by analyzing failed login attempts, source IPs, and authentication behavior.</p>
+                        <div class="tag-row">
+                            <span class="tag tag-sm">Python</span>
+                            <span class="tag tag-sm">Pandas</span>
+                            <span class="tag tag-sm">Regex</span>
+                            <span class="tag tag-sm">Log Analysis</span>
+                            <span class="tag tag-sm">Incident Response</span>
                         </div>
                     </div>
                 </div>
@@ -407,7 +575,7 @@
                     <div class="card-body">
                         <span class="badge-inline">Ongoing</span>
                         <h3>M.Sc. Information and Communication Engineering</h3>
-                        <p class="card-company">Technische Universität Darmstadt &mdash; Germany</p>
+                        <p class="card-company">Technische Universität Darmstadt · Germany</p>
                         <p class="card-date">Oct 2022 – Present</p>
                     </div>
                 </div>
@@ -416,7 +584,7 @@
                     <div class="card-body">
                         <span class="badge-inline">Completed</span>
                         <h3>B.Tech. Electronic &amp; Communication Engineering</h3>
-                        <p class="card-company">K.S Institute of Technology (VTU) &mdash; Bangalore, India</p>
+                        <p class="card-company">K.S Institute of Technology (VTU) · Bangalore, India</p>
                         <p class="card-date">Aug 2016 – Aug 2020</p>
                     </div>
                 </div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResumeGPT Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body { background: #0d1117; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: Inter, sans-serif; }
+        .diagram-wrap { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 40px; max-width: 720px; width: 100%; }
+        h2 { color: #e50914; font-size: 18px; margin: 0 0 24px; letter-spacing: 0.5px; }
+    </style>
+</head>
+<body>
+    <div class="diagram-wrap">
+        <h2>ResumeGPT — Architecture</h2>
+        <div class="mermaid">
+flowchart TD
+    subgraph offline["Offline / Build Time"]
+        CV["📄 Sadhvika's CV\n(full text)"]
+        SP["System Prompt\n(CV embedded directly)"]
+        CV --> SP
+    end
+
+    subgraph online["Online / Per Request"]
+        USER["👤 User Question"]
+        HIST["Conversation History\n(session state)"]
+        CTX["Context Assembly\nSystem Prompt + History + Query"]
+        API["OpenAI API\nGPT-4o-mini"]
+        RESP["💬 Streamed Response"]
+
+        USER --> HIST
+        SP --> CTX
+        HIST --> CTX
+        CTX --> API
+        API --> RESP
+        RESP --> HIST
+    end
+
+    style offline fill:#1a1a2e,stroke:#e50914,color:#fff
+    style online fill:#0d1117,stroke:#30363d,color:#fff
+        </div>
+    </div>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+</body>
+</html>

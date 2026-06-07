@@ -87,14 +87,14 @@ Guidelines:
 
 ─────────────────────────────────────────
 SADHVIKA CHANDRA RAMACHANDRA
-Location : Dieburger Str. 5, Roßdorf, Germany
+Location : 20/3, Jayanagar east, LIC colony, 560011, Bengaluru, Karnataka, India
 LinkedIn : linkedin.com/in/sadhvikacr
 Email    : sadhvikachandra613@gmail.com
-Phone    : +49 15212097249
+Phone    : +91 9108459165 / +49 15212097249
 ─────────────────────────────────────────
 
 PROFESSIONAL SUMMARY
-Security-focused IT professional with 3 years of experience in OT security, incident response, and enterprise systems. Remediated critical OT vulnerabilities across 6 industrial units. Adept at SIEM monitoring, ISO 27001 compliance, and risk mitigation. Skilled in Python, SQL, Power BI, and GRC tools, with a focus on automation, threat detection, and proactive defence strategies.
+Remediated critical OT vulnerabilities across 6 industrial units — now driving cyber defenses with precision, compliance, and automation. Security-focused IT professional with 3 years of experience in OT security, incident response, and enterprise systems. Adept at SIEM monitoring, ISO 27001 compliance, and risk mitigation. Skilled in Python, SQL, Power BI, and GRC tools, with a focus on automation, threat detection, and proactive defense strategies.
 
 WORK EXPERIENCE
 
@@ -114,7 +114,7 @@ Tutor | WhiteHat Jr (BYJU'S) | Mumbai, India | Oct 2020 – Apr 2021
 
 EDUCATION
 
-M.Sc. Information and Communication Engineering | Technische Universität Darmstadt, Germany | Oct 2022 – Ongoing
+M.Sc. Information and Communication Engineering | Technische Universität Darmstadt, Germany | Oct 2022 – Aug 2026
 B.Tech Electronic & Communication Engineering | K.S Institute of Technology (VTU), Bangalore, India | Aug 2016 – Aug 2020
 
 KEY SKILLS
@@ -130,6 +130,11 @@ Languages       : English (C2), German (B2 – in progress), Hindi, Kannada, Tam
 
 ACADEMIC PROJECTS
 
+"Efficient Implementations of Neural Networks on FPGAs" | Master's Thesis | Guide: Prof. Dr.-Ing. Grace Li Zhang
+• Developed optimized CNN models (VGG-16, ResNet) for hardware deployment by reducing computation complexity while preserving model accuracy
+• Designed a structured compression pipeline combining basis sharing, shift-based operations, and quantization for efficient hardware execution
+• Evaluated performance trade-offs across multiple model variants for real-world edge AI deployment
+
 "Automated Semantic Diffing of Websites with LLMs" | Fraunhofer
 • Developed an LLM-based system for detecting web-based cyber threats via semantic diffing
 • Automated DOM-level and contextual drift detection for vulnerability tracking
@@ -144,6 +149,30 @@ ACADEMIC PROJECTS
 • Built IoT-based RFID attendance system in Python
 • Enabled real-time absentee alerts via SMS/email (SMTP)
 • Achieved 80% accuracy boost in attendance reporting
+
+"CVE Threat Intelligence Dashboard" | Personal Project
+• Automated threat intelligence dashboard collecting and analyzing CVE data from public vulnerability feeds using Python and the NVD API
+• Implemented risk-based prioritization of vulnerabilities based on CVSS scores and generated visual reports for security monitoring
+• Built interactive Power BI dashboards to track emerging threats, vulnerability trends, and critical security advisories
+Technologies: Python, NVD API, Power BI, Pandas
+
+"Security Log Analysis and Brute-Force Detection System" | Personal Project
+• Designed and implemented a security log analysis tool to detect brute-force attacks and suspicious authentication activities from system logs
+• Automated event correlation and anomaly detection by analyzing failed login attempts, source IP patterns, and authentication behavior
+• Generated security alerts and incident summaries to support threat detection and incident response workflows
+Technologies: Python, Pandas, Regular Expressions, Windows/Linux Logs
+
+LEADERSHIP EXPERIENCE
+
+Vice President IGTA | AIESEC, LC Frankfurt | Nov 2025 – Ongoing
+• Managed and coordinated IGTA activities with focus on talent management, team performance, and organizational development
+• Led team members through goal setting, performance feedback, and professional development support
+
+FEMTEC – Career-Building Program for High-Potential Women | Jun 2023 – Sep 2024
+• Led a diverse team of 25 people within a P&G innovation lab
+• Gained experience in German work culture and interdisciplinary collaboration
+
+Recognition: SWAYAM Student Volunteering Champion (2020), Best Student of Chapter (2019), VTU Interzone Sports (2019), IEEE member (since 2017), ISTE (2020), NSS Karnataka State RD Parade (2019).
 
 CERTIFICATIONS
 • IoT Workshop | Microsoft
